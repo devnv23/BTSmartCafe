@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2013 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="10dp">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Device Name : "
+                  android:textSize="18sp"/>
+        <Space android:layout_width="5dp"
+               android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/device_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="10dp">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/label_state"
+                  android:textSize="18sp"/>
+        <Space android:layout_width="5dp"
+               android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/connection_state"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/disconnected"
+                  android:textSize="18sp"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="10dp">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/label_data"
+                  android:textSize="18sp"/>
+        <Space android:layout_width="5dp"
+               android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/data_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_data"
+            android:textSize="18sp" />
+        
+    </LinearLayout>
+    <Space android:layout_width="5dp"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical|center_horizontal">
+    <Button
+
+        android:id="@+id/buttonledOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="POWER ON"
+        android:background="#3F51B5"
+        android:onClick="Poweron"
+        android:textColor="#FFFFFF"
+
+        />
+        <Space android:layout_width="15dp"
+            android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/buttonledOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="POWER OFF"
+        android:onClick="Poweroff"
+        android:background="#FFA07A"
+
+        android:textColor="#FFFFFF"
+        android:textStyle="normal|bold"
+        android:textSize="15sp"
+        android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+    <Space android:layout_width="wrap_content"
+        android:layout_height="30dp"/>
+    <LinearLayout
+        android:id="@+id/llcups"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/squareboarder"
+        android:padding="1dp"
+        android:layout_gravity="center_horizontal"
+
+        >
+        <ImageButton
+            android:id="@+id/smallcup"
+            android:layout_width="75dp"
+            android:layout_height="150dp"
+            android:onClick="smallcup"
+            android:src="@drawable/coffee_small"
+            android:background="@color/smart_cafe"
+            />
+        <ImageButton
+            android:layout_width="90dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/smart_cafe"
+            android:padding="0dp"
+            android:onClick="mediumcup"
+            android:src="@drawable/coffee_medium"/>
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/smart_cafe"
+            android:onClick="largecup"
+            android:src="@drawable/coffee_large"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/custom1"
+        android:visibility="invisible">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customize your Cup"
+            android:textSize="18sp"
+            android:id="@+id/custom1"
+            android:layout_below="@+id/llcups"
+            android:layout_marginLeft="0dp"
+            android:textColor="#000000"/>
+        <EditText
+            android:id="@+id/customcup"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            />
+        <Button
+            android:id="@+id/Gobtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go"
+            android:onClick="customcup"/>
+    </LinearLayout>
+
+     <TextView
+        android:id="@+id/isSerial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/is_serial"
+         android:visibility="invisible"
+         android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:text="@string/red_slide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:visibility="invisible"/>
+
+    <SeekBar
+        android:id="@+id/seekRed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:max="255"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:text="@string/green_slide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	 <SeekBar
+        android:id="@+id/seekGreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:visibility="invisible"
+        android:max="255" />
+
+	 <TextView
+	     android:id="@+id/textView3"
+	     android:text="@string/blue_slide"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+         android:visibility="invisible"
+	     android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	<SeekBar
+	    android:id="@+id/seekBlue"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+        android:visibility="invisible"
+	    android:max="255" />
+
+
+
+</LinearLayout>
