@@ -8,8 +8,16 @@
         "source": "D:\\BT4LEDTest\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "D:\\BT4LEDTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_philipssenseo2.png.flat",
+        "source": "D:\\BT4LEDTest\\app\\src\\main\\res\\drawable-hdpi\\philipssenseo2.png"
+    },
+    {
         "merged": "D:\\BT4LEDTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher.png.flat",
         "source": "D:\\BT4LEDTest\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\BT4LEDTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_customboarder.xml.flat",
+        "source": "D:\\BT4LEDTest\\app\\src\\main\\res\\drawable-hdpi\\customboarder.xml"
     },
     {
         "merged": "D:\\BT4LEDTest\\app\\build\\intermediates\\res\\merged\\debug\\layout_gatt_services_characteristics.xml.flat",
@@ -44,6 +52,10 @@
         "source": "D:\\BT4LEDTest\\app\\src\\main\\res\\drawable-xxhdpi\\squareboarder.xml"
     },
     {
+        "merged": "D:\\BT4LEDTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_philipssenseo1.jpg.flat",
+        "source": "D:\\BT4LEDTest\\app\\src\\main\\res\\drawable-mdpi\\philipssenseo1.jpg"
+    },
+    {
         "merged": "D:\\BT4LEDTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_coffee_large.png.flat",
         "source": "D:\\BT4LEDTest\\app\\src\\main\\res\\drawable-hdpi\\coffee_large.png"
     },
@@ -54,5 +66,9 @@
     {
         "merged": "D:\\BT4LEDTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher.png.flat",
         "source": "D:\\BT4LEDTest\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\BT4LEDTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_philipssenseo.jpg.flat",
+        "source": "D:\\BT4LEDTest\\app\\src\\main\\res\\drawable-hdpi\\philipssenseo.jpg"
     }
 ]

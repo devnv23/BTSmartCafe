@@ -33,6 +33,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -113,7 +114,9 @@ public class DeviceControlActivity extends Activity {
             if (BluetoothLeService.ACTION_GATT_CONNECTED.equals(action)) {
                 mConnected = true;
                 updateConnectionState(R.string.connected);
+
                 invalidateOptionsMenu();
+
             } else if (BluetoothLeService.ACTION_GATT_DISCONNECTED.equals(action)) {
                 mConnected = false;
                 updateConnectionState(R.string.disconnected);
@@ -144,6 +147,10 @@ public class DeviceControlActivity extends Activity {
         // Sets up UI references.
         ((TextView) findViewById(R.id.device_address)).setText(mDeviceName);
          mConnectionState = (TextView) findViewById(R.id.connection_state);
+         if(mConnected)
+         {
+             Poweroff();
+         }
         // is serial present?
         isSerial = (TextView) findViewById(R.id.isSerial);
    
@@ -160,6 +167,7 @@ public class DeviceControlActivity extends Activity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
         Intent gattServiceIntent = new Intent(this, BluetoothLeService.class);
         bindService(gattServiceIntent, mServiceConnection, BIND_AUTO_CREATE);
+
     }
 
     @Override
@@ -304,12 +312,25 @@ public class DeviceControlActivity extends Activity {
         Toast.makeText(getApplicationContext(), "Power On" ,Toast.LENGTH_SHORT).show();
         vibe.vibrate(80);
         sendDataToBLE(Power_ON);
+        LinearLayout myLayout = (LinearLayout) findViewById(R.id.llcups);
+       // myLayout.getVisibility();
+        myLayout.setVisibility(view.getVisibility());
     }
     public void Poweroff(View view){
         Toast.makeText(getApplicationContext(), "Power Off" ,Toast.LENGTH_SHORT).show();
         vibe.vibrate(80);
         sendDataToBLE(Power_Off);
+        LinearLayout myLayout = (LinearLayout) findViewById(R.id.llcups);
+        // myLayout.getVisibility();
+        myLayout.setVisibility(view.GONE);
 
+    }
+    public void Poweroff()
+    {
+       if(mConnected)
+       {
+           sendDataToBLE(Power_Off);
+       }
     }
     public void smallcup (View view){
         Toast.makeText(getApplicationContext(), "Small Coffee" ,Toast.LENGTH_SHORT).show();

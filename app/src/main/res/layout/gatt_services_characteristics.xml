@@ -17,6 +17,8 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/smart_cafe"
+        android:screenOrientation="portrait"
         android:layout_margin="10dp">
     <LinearLayout android:orientation="horizontal"
                   android:layout_width="match_parent"
@@ -112,6 +114,7 @@
         android:background="@drawable/squareboarder"
         android:padding="1dp"
         android:layout_gravity="center_horizontal"
+        android:visibility="invisible"
 
         >
         <ImageButton
@@ -138,6 +141,13 @@
             android:onClick="largecup"
             android:src="@drawable/coffee_large"/>
     </LinearLayout>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/philipssenseo2"
+        android:background="@color/smart_cafe"
+        android:layout_gravity="center_horizontal"
+                />
 
     <LinearLayout
         android:orientation="horizontal"
